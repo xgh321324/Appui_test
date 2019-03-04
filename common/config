@@ -1,0 +1,17 @@
+
+nub1:
+    - admin1
+    - '123456'
+
+nb2:
+    - admin2
+    - '111111'
+
+nb3:
+    - admin3
+    - '222222'
+
+locators:
+         name: 微信登录
+         type: id
+         value: com.sankuai.meituan:id/passport_button_wechat
