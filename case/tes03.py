@@ -20,6 +20,7 @@ driver = webdriver.Remote(r'http://127.0.0.1:4723/wd/hub', desired_caps)
 #等待主页activity
 driver.wait_activity('.base.ui.MainActivity',30)
 
+
 #通过text定位
 loc = 'new UiSelector().text("图书")'
 driver.find_element_by_android_uiautomator(loc).click()

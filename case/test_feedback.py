@@ -39,7 +39,7 @@ class BuyLesson(unittest.TestCase):
             self.mypage.click_feedback()
 
             # 输入反馈内容
-            self.mypage.send_keys(loc=self.mypage.feedback_content, vaule='反馈内容内容！')
+            self.mypage.send_keys(loc=self.mypage.feedback_content, value='反馈内容内容！')
             # 点击提交反馈
             self.mypage.click_submit_feedback_btn()
             try:
@@ -56,7 +56,7 @@ class BuyLesson(unittest.TestCase):
         u'标题和内容'
         try:
             # 输入标题
-            self.mypage.send_keys(loc=self.mypage.feedback_title, vaule='反馈意见标题')
+            self.mypage.send_keys(loc=self.mypage.feedback_title, value='反馈意见标题')
             # 点击提交反馈
             self.mypage.click_submit_feedback_btn()
             try:
@@ -78,9 +78,9 @@ class BuyLesson(unittest.TestCase):
             # 点击意见反馈
             self.mypage.click_feedback()
             # 输入反馈内容
-            self.mypage.send_keys(loc=self.mypage.feedback_content, vaule='反馈内容内容！')
+            self.mypage.send_keys(loc=self.mypage.feedback_content, value='反馈内容内容！')
             # 输入标题
-            self.mypage.send_keys(loc=self.mypage.feedback_title, vaule='反馈意见标题')
+            self.mypage.send_keys(loc=self.mypage.feedback_title, value='反馈意见标题')
             # 添加图片
             self.mypage.click_add_pic()
             # 调用friendpage的选择照片方法
@@ -89,10 +89,11 @@ class BuyLesson(unittest.TestCase):
             self.mypage.click_submit_feedback_btn()
             try:
                 # 断言toast
-                r = self.mypage.is_toast_exist(self.driver, text='澜渟：提交成功')
+                r = self.mypage.is_toast_exist(self.driver, text='提交成功')
                 self.assertTrue(r)
             except Exception as e:
                 print('断言出错', e)
+                raise
         except Exception as e:
             print('标题+内容+图片出错')
             raise
