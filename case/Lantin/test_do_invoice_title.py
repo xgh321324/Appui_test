@@ -94,6 +94,7 @@ class Set(unittest.TestCase):
             # 得到第一条的坐标信息
             location = self.InvoicePage.get_location()
             # 向左滑动显示出删除按钮
+            # 用ele.rec来获取该元素坐标，然后用swipe方法左滑
             self.driver.swipe(location['width']*0.8, (location['y'] + location['height']/2), location['width']*0.4, (location['y'] + location['height']/2))
             # 点击删除
             self.InvoicePage.click_del_title()
