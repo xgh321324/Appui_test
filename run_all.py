@@ -14,7 +14,7 @@ def all_case():
     -top_level_dir：这个是顶层目录的名称，一般默认等于 None 就行了
     '''
     #待执行的测试用例
-    case_dir = 'C:\\Users\\Administrator\\Documents\\GitHub\\LanTin\case'
+    case_dir = 'C:\\Users\\Administrator\\Documents\\GitHub\\LanTin\\case'
     test_case = unittest.TestSuite()   #创建测试套件(此时是个空的)
     discover = unittest.defaultTestLoader.discover(case_dir, pattern='test*.py', top_level_dir=None)
     #将discover筛选出的测试用例循环添加到测试套件中
