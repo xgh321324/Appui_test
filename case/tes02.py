@@ -14,6 +14,7 @@ desired_caps = {
 }
 driver = webdriver.Remote(r'http://127.0.0.1:4723/wd/hub', desired_caps)
 time.sleep(5)
+
 ac = driver.current_activity
 print(ac)
 driver.wait_activity(ac,30)

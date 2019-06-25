@@ -1,4 +1,4 @@
-#coding:utf-8
+# coding:utf-8
 from appium import webdriver
 import time,os
 from common.My_swipe import swipe_down
