@@ -4,7 +4,7 @@ import time
 import unittest
 from pages.friend_page import Friend
 
-
+# 最终版
 class Post_pic(unittest.TestCase):
 
     @classmethod
